@@ -1,0 +1,45 @@
+{
+  "name": "lupin",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Anti-surveillance automation tool for maintaining activity presence",
+  "type": "module",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yang-gyunam/lupin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yang-gyunam/lupin/issues"
+  },
+  "homepage": "https://github.com/yang-gyunam/lupin",
+  "author": {
+    "name": "Yang Gyunam",
+    "email": "knyang@gmail.com"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "tauri": "tauri",
+    "clean": "rm -rf dist node_modules/.vite",
+    "prebuild": "./scripts/clean-build.sh",
+    "tauri:build": "./scripts/clean-build.sh && npm run tauri build && ./scripts/build-clean-dmg.sh",
+    "build-dmg": "./scripts/build-clean-dmg.sh",
+    "clean-dmg": "./scripts/clean-build.sh && ./scripts/build-clean-dmg.sh"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "@tauri-apps/api": "^2",
+    "@tauri-apps/plugin-opener": "^2"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.6.0",
+    "typescript": "~5.8.3",
+    "vite": "^7.0.4",
+    "@tauri-apps/cli": "^2"
+  }
+}
